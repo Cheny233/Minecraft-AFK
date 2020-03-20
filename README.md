@@ -11,6 +11,6 @@
 ## 使用说明
 1. 请先用 <kbd>F3</kbd>+<kbd>P</kbd> 停用失去焦点后暂停
 2. 接着按 <kbd>Alt</kbd>+<kbd>tab</kbd> 切出
-3. 可以多开达到挂机完成多项操作的目的<br>
+3. 可以多开达到挂机完成多项操作的目的
 
 详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
