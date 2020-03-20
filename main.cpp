@@ -57,13 +57,9 @@ void Input()
 	{
 		cout << "请输入字母（小写）" << endl;
 		cin >> ch;
-		vkCode = LOBYTE(VkKeyScan(ch));
 	}
 	else if (Mode == 6)
-	{
 		ch = ' ';
-		vkCode = LOBYTE(VkKeyScan(ch));
-	}
 	cout << "请输入多少时间后后开始操作（单位毫秒）：" << endl;
 	cin >> Start;
 	cout << "请输入操作持续多少时间后暂停（单位毫秒，-1为无限，设为0则表示操作一次立刻暂停）" << endl;
@@ -72,6 +68,7 @@ void Input()
 	cin >> Space;
 	if (Mode >= 5)
 	{
+		vkCode = LOBYTE(VkKeyScan(ch));
 		down.scanCode = MapVirtualKey(vkCode, MAPVK_VK_TO_VSC);
 		up.scanCode = MapVirtualKey(vkCode, MAPVK_VK_TO_VSC);
 		up.repeatCount = 1;
