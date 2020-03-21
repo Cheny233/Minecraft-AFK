@@ -17,7 +17,7 @@ int Mode, Start, Continue, Space, Speed;
 char ch;
 short vkCode;
 HWND hwnd;
-Node down = {}, up = {};
+int keydown, keyup;
 
 void getWindow()
 {
@@ -68,12 +68,15 @@ void Input()
 	cin >> Space;
 	if (Mode >= 5)
 	{
+		Node down = {}, up = {};
 		vkCode = LOBYTE(VkKeyScan(ch));
 		down.scanCode = MapVirtualKey(vkCode, MAPVK_VK_TO_VSC);
 		up.scanCode = MapVirtualKey(vkCode, MAPVK_VK_TO_VSC);
 		up.repeatCount = 1;
 		up.prevKeyState = true;
 		up.transitionState = true;
+		keydown = down;
+		keyup = up;
 	}
 }
 
@@ -149,19 +152,19 @@ void Do()
 	}
 	if (Mode >= 5)
 	{
-		PostMessage(hwnd, WM_KEYDOWN, vkCode, down);
+		PostMessage(hwnd, WM_KEYDOWN, vkCode, keydown);
 		while (true)
 		{
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
-				PostMessage(hwnd, WM_KEYUP, vkCode, up);
+				PostMessage(hwnd, WM_KEYUP, vkCode, keyup);
 				Sleep(Space);
-				PostMessage(hwnd, WM_KEYDOWN, vkCode, down);
+				PostMessage(hwnd, WM_KEYDOWN, vkCode, keydown);
 				tstart = clock();
 			}
 			if (GetAsyncKeyState(VK_RCONTROL))
 			{
-				PostMessage(hwnd, WM_KEYUP, vkCode, up);
+				PostMessage(hwnd, WM_KEYUP, vkCode, keyup);
 				return;
 			}
 		}
