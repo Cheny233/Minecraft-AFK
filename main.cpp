@@ -25,6 +25,7 @@ void getWindow()
 			{
 				char title[50];
 				::GetWindowTextA(hwnd, title, sizeof(title));
+				system("cls");
 				cout << "捕获成功！窗口名称：" << endl;
 				cout << title << endl;
 			}
@@ -33,34 +34,34 @@ void getWindow()
 			cout << endl;
 			return;
 		}
-		Sleep(50);
+		Sleep(1);
 	}
 }
 
 void Input()
 {
-	cout << "请输入数字选择操作" << endl;
-	cout << "1:左键连点 2:左键长按" << endl;
-	cout << "3:右键连点 4:右键长按" << endl;
-	cout << "5:字母键长按 6:空格长按" << endl;
+	cout << "[1]左键连点 [2]左键长按" << endl;
+	cout << "[3]右键连点 [4]右键长按" << endl;
+	cout << "[5]字母键长按 [6]空格长按" << endl;
+	cout << "请输入数字选择操作" << endl << "<< ";
 	cin >> Mode;
 	if (Mode == 1 || Mode == 3)
 	{
-		cout << "请输入连点速度（单位毫秒）：" << endl;
+		cout << "请输入连点速度（毫秒）" << endl << "<< ";
 		cin >> Speed;
 	}
 	else if (Mode == 5)
 	{
-		cout << "请输入字母（小写）：" << endl;
+		cout << "请输入字母" << endl << "<< ";
 		cin >> ch;
 	}
 	else if (Mode == 6)
 		ch = ' ';
-	cout << "请输入多少时间后后开始操作（单位毫秒）：" << endl;
+	cout << "多少时间后后开始操作（毫秒）" << endl << "<< ";
 	cin >> Start;
-	cout << "请输入操作持续多少时间后暂停（单位毫秒，-1为无限，设为0则表示操作一次立刻暂停）" << endl;
+	cout << "操作持续多少时间后暂停（毫秒，-1为无限）" << endl << "<< ";
 	cin >> Continue;
-	cout << "请输入暂停后间隔多少时间继续操作（单位毫秒）：" << endl;
+	cout << "暂停后间隔多少时间继续操作（毫秒）" << endl << "<< ";
 	cin >> Space;
 	if (Mode >= 5)
 	{
@@ -166,21 +167,24 @@ void Do()
 
 int main()
 {
-	system("title Minecraft后台挂机程序 By Cheny");
+	system("title Minecraft-AFK By Cheny");
+	system("mode con cols=50 lines=30");
 	cout << "请前往指定窗口按下左Ctrl+左Alt捕获窗口" << endl;
 	while (hwnd == NULL)
 		getWindow();
 	Input();
-	cout << "若要后台挂机，请按F3+P停用失去焦点后暂停，再按Alt+tab切出" << endl;
-	cout << "请按下右Alt开始操作，按下右Ctrl结束" << endl;
+	cout << endl << "请在任意位置按下右Alt开始操作" << endl;
+	cout << "任意位置按下右Ctrl结束" << endl << endl;
 	while (true)
 	{
 		if (GetAsyncKeyState(VK_RMENU))
 		{
 			cout << "开始操作" << endl;
+			system("color 03");
 			Do();
 			cout << "操作结束！按右Alt重新开始！" << endl;
+			system("color 07");
 		}
-		Sleep(50);
+		Sleep(1);
 	}
 }
