@@ -179,10 +179,10 @@ int main()
 	{
 		if (GetAsyncKeyState(VK_RMENU))
 		{
-			cout << "开始操作" << endl;
+			cout << "\r开始操作！按右Ctrl可结束！";
 			system("color 03");
 			Do();
-			cout << "操作结束！按右Alt重新开始！" << endl;
+			cout << "\r操作结束！按右Alt重新开始！";
 			system("color 07");
 		}
 		Sleep(1);
