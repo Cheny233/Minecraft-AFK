@@ -2,22 +2,17 @@
 #include<Windows.h>
 using namespace std;
 
-struct Node
-{
-	unsigned short repeatCount;
-	unsigned char scanCode;
-	bool extendedKey, prevKeyState, transitionState;
-	operator unsigned int()
-	{
-		return repeatCount | (scanCode << 16) | (extendedKey << 24) | (prevKeyState << 30) | (transitionState << 31);
-	}
-};
-
 int Mode, Start, Continue, Space, Speed;
 char ch;
 short vkCode;
 HWND hwnd;
 int keydown, keyup;
+
+int get_Lparam(int vk, bool flag)
+{
+	int scanCode = MapVirtualKey(vk, MAPVK_VK_TO_VSC);
+	return flag | (scanCode << 16) | (flag << 30) | (flag << 31);
+}
 
 void getWindow()
 {
@@ -38,6 +33,7 @@ void getWindow()
 			cout << endl;
 			return;
 		}
+		Sleep(50);
 	}
 }
 
@@ -55,7 +51,7 @@ void Input()
 	}
 	else if (Mode == 5)
 	{
-		cout << "请输入字母（小写）" << endl;
+		cout << "请输入字母（小写）：" << endl;
 		cin >> ch;
 	}
 	else if (Mode == 6)
@@ -68,15 +64,9 @@ void Input()
 	cin >> Space;
 	if (Mode >= 5)
 	{
-		Node down = {}, up = {};
 		vkCode = LOBYTE(VkKeyScan(ch));
-		down.scanCode = MapVirtualKey(vkCode, MAPVK_VK_TO_VSC);
-		up.scanCode = MapVirtualKey(vkCode, MAPVK_VK_TO_VSC);
-		up.repeatCount = 1;
-		up.prevKeyState = true;
-		up.transitionState = true;
-		keydown = down;
-		keyup = up;
+		keydown = get_Lparam(vkCode, false);
+		keyup = get_Lparam(vkCode, true);
 	}
 }
 
@@ -115,6 +105,7 @@ void Do()
 				SendMessage(hwnd, WM_LBUTTONUP, 0, 0);
 				return;
 			}
+			Sleep(1);
 		}
 	}
 	if (Mode == 3)
@@ -148,6 +139,7 @@ void Do()
 				SendMessage(hwnd, WM_RBUTTONUP, 0, 0);
 				return;
 			}
+			Sleep(1);
 		}
 	}
 	if (Mode >= 5)
@@ -167,6 +159,7 @@ void Do()
 				PostMessage(hwnd, WM_KEYUP, vkCode, keyup);
 				return;
 			}
+			Sleep(1);
 		}
 	}
 }
@@ -188,5 +181,6 @@ int main()
 			Do();
 			cout << "操作结束！按右Alt重新开始！" << endl;
 		}
+		Sleep(50);
 	}
 }
