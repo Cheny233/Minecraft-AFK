@@ -26,3 +26,9 @@
   
 #### 我还是不懂具体如何操作怎么办
 >>详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
+
+## 关于反馈
+- 如果你发现了程序的bug，你可以在[这里](https://github.com/Cheny233/Minecraft-AFK/issues)反馈
+
+## Language localization
+We welcome your post-contribution to language localization. You can open a new [Pull Requests](https://github.com/Cheny233/Minecraft-AFK/pulls) to me.
