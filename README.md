@@ -1,12 +1,12 @@
 # Minecraft-AFK
-一个Minecraft的挂机程序，即使失去焦点依然可以完成鼠标/键盘的动作
+一个Minecraft的挂机程序，即使失去焦点依然可以完成鼠标/键盘的动作<br>
+A Minecraft AFK program that can complete mouse / keyboard actions even if it loses focus or is minimized.
 
----
-
+----
 ## 其他版本
 | 编写语言 | 项目地址 | 项目说明
 | ---- | ---- | ---- |
-| Python | [jinzhijie/py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护的Python版本
+| Python | [py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python版本
 
 ## 适用于
 - 挂机钓鱼（最基础简单的挂机方法）
@@ -14,9 +14,15 @@
 - 挂机跑图 ~~（虽然你可能会由于某些意外情况惨死在路上）~~
 
 ## 使用说明
-1. 请先从[release](https://github.com/Cheny233/Minecraft-AFK/releases)或我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载合适的版本
-2. 用 <kbd>F3</kbd>+<kbd>P</kbd> 停用失去焦点后暂停
-3. 接着按 <kbd>Alt</kbd>+<kbd>tab</kbd> 切出
-4. 可以多开达到挂机完成多项操作的目的
+1. 请先从[Release](https://github.com/Cheny233/Minecraft-AFK/releases)或我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载合适的版本
+2. 解压后运行，按照提示操作即可
 
-详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
+## 常见问题
+#### 如何实现后台挂机？
+>>用 <kbd>F3</kbd>+<kbd>P</kbd> 停用失去焦点后暂停，接着按 <kbd>Alt</kbd>+<kbd>tab</kbd> 切出
+  
+#### 如何挂机完成多项操作
+>>可以多开达到挂机完成多项操作的目的
+  
+#### 我还是不懂具体如何操作怎么办
+>>详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
