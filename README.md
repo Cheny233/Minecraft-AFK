@@ -5,7 +5,7 @@
 ## 其他版本
 | 编写语言 | 项目地址 | 项目说明
 | ---- | ---- | ---- |
-| Python | [py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python3版本
+| Python3 | [py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python3版本
 
 ## 适用于
 - 挂机钓鱼（最基础简单的挂机方法）
