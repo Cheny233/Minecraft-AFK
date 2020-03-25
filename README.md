@@ -20,13 +20,13 @@
 
 ## 常见问题
 #### 如何实现后台挂机？
->用 <kbd>F3</kbd>+<kbd>P</kbd> 停用失去焦点后暂停，接着按 <kbd>Alt</kbd>+<kbd>tab</kbd> 切出
+- 用 <kbd>F3</kbd>+<kbd>P</kbd> 停用失去焦点后暂停，接着按 <kbd>Alt</kbd>+<kbd>tab</kbd> 切出
   
 #### 如何挂机完成多项操作
->可以多开达到挂机完成多项操作的目的
+- 可以多开达到挂机完成多项操作的目的
   
 #### 我还是不懂具体如何操作怎么办
->详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
+- 详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
 
 ## 关于反馈
 - 如果你发现了程序的bug，你可以在Issues中反馈
