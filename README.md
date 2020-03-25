@@ -13,8 +13,9 @@
 - 挂机跑图 ~~（虽然你可能会由于某些意外情况惨死在路上）~~
 
 ## 使用说明
-1. 请先从[Release](https://github.com/Cheny233/Minecraft-AFK/releases)或我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载合适的版本
-2. 解压后运行，按照提示操作即可
+1. 请先从[Release](https://github.com/Cheny233/Minecraft-AFK/releases)下载合适的版本
+2. 如果下载的慢~~（其实文件很小）~~，也可以从我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载最新版本
+3. 解压后运行，按照提示操作即可
 
 ## 常见问题
 #### 如何实现后台挂机？
