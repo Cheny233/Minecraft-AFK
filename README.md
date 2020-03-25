@@ -1,5 +1,5 @@
 # Minecraft-AFK
-![ICON](https://github.com/Cheny233/Minecraft-AFK/blob/master/icon.ico)  
+![ICON](https://attachment.mcbbs.net/forum/202003/25/123653j8nvw2qa8mqjze7e.png)  
 一个Minecraft的挂机程序，即使失去焦点依然可以完成鼠标/键盘的动作<br>
 
 ----
