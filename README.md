@@ -5,7 +5,7 @@
 ## 其他版本
 | 编写语言 | 项目地址 | 项目说明
 | ---- | ---- | ---- |
-| Python | [py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python版本
+| Python | [py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python3版本
 
 ## 适用于
 - 挂机钓鱼（最基础简单的挂机方法）
@@ -29,7 +29,7 @@
 - 详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
 
 ## 关于反馈
-- 如果你发现了程序的bug，你可以在Issues中反馈
+如果你发现了程序的bug，你可以在Issues中反馈
 
 ## Language localization
 We welcome your post-contribution to language localization. You can open a new [Pull Requests](https://github.com/Cheny233/Minecraft-AFK/pulls) to me.
