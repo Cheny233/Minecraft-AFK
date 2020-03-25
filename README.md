@@ -14,7 +14,7 @@
 
 ## 使用说明
 1. 请先从[Release](https://github.com/Cheny233/Minecraft-AFK/releases)下载合适的版本
-2. 如果下载的慢~~（其实文件很小）~~，也可以从我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载最新版本
+2. 如果下载的慢 ~~（虽然其实文件很小）~~ ，也可以从我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载最新版本
 3. 解压后运行，按照提示操作即可
 
 ## 常见问题
