@@ -12,8 +12,8 @@ A win32api-based Minecraft AFK program that can complete mouse / keyboard action
 - 挂机完成某些MC工程（如铺铁轨等）
 
 ## 使用说明
-1. 请先从[Release](https://github.com/Cheny233/Minecraft-AFK/releases)下载合适的版本
-2. 如果下载的慢 ~~（虽然其实文件很小）~~ ，也可以从我的[MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)下载最新版本
+1. 请先从 [Release](https://github.com/Cheny233/Minecraft-AFK/releases) 下载合适的版本
+2. 如果下载的慢 ~~（虽然其实文件很小）~~ ，也可以从我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html) 下载最新版本
 3. 解压后运行，按照提示操作即可
 
 ## 常见问题
@@ -27,7 +27,7 @@ A win32api-based Minecraft AFK program that can complete mouse / keyboard action
 - 详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
 
 ## 关于反馈
-如果你发现了程序的bug，你可以在Issues中反馈
+如果你发现了程序的bug，你可以在 [Issues](https://github.com/Cheny233/Minecraft-AFK/issues) 中反馈
 
 ## 其他版本
 | 编写语言 | 项目地址 | 项目说明
