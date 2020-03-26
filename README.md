@@ -1,6 +1,7 @@
 # Minecraft-AFK
 ![ICON](https://attachment.mcbbs.net/forum/202003/25/123653j8nvw2qa8mqjze7e.png)  
-一个Minecraft的挂机程序，即使失去焦点依然可以完成鼠标/键盘的动作<br>
+一个Minecraft的挂机程序，即使失去焦点或最小化依然可以完成鼠标/键盘的动作<br>
+A win32api-based Minecraft AFK program that can complete mouse / keyboard actions even if it loses focus or is minimized.
 
 ----
 
