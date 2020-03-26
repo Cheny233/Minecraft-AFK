@@ -71,9 +71,22 @@ void Input()
 	}
 }
 
+bool sleep(int t)
+{
+	long now = clock();
+	while (clock() - now < t)
+	{
+		Sleep(1);
+		if (GetAsyncKeyState(VK_RCONTROL))
+			return true;
+	}
+	return false;
+}
+
 void Do()
 {
-	Sleep(Start);
+	if (sleep(Start))
+		return;
 	long tstart = clock();
 	if (Mode == 1)
 		while (true)
@@ -83,7 +96,8 @@ void Do()
 			Sleep(Speed);
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
-				Sleep(Space);
+				if (sleep(Space))
+					return;
 				tstart = clock();
 			}
 			if (GetAsyncKeyState(VK_RCONTROL))
@@ -97,7 +111,8 @@ void Do()
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
 				SendMessage(hwnd, WM_LBUTTONUP, 0, 0);
-				Sleep(Space);
+				if (sleep(Space))
+					return;
 				SendMessage(hwnd, WM_LBUTTONDOWN, 0, 0);
 				tstart = clock();
 			}
@@ -117,7 +132,8 @@ void Do()
 			Sleep(Speed);
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
-				Sleep(Space);
+				if (sleep(Space))
+					return;
 				tstart = clock();
 			}
 			if (GetAsyncKeyState(VK_RCONTROL))
@@ -131,7 +147,8 @@ void Do()
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
 				SendMessage(hwnd, WM_RBUTTONUP, 0, 0);
-				Sleep(Space);
+				if (sleep(Space))
+					return;
 				SendMessage(hwnd, WM_RBUTTONDOWN, 0, 0);
 				tstart = clock();
 			}
@@ -151,7 +168,8 @@ void Do()
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
 				PostMessage(hwnd, WM_KEYUP, vkCode, keyup);
-				Sleep(Space);
+				if (sleep(Space))
+					return;
 				PostMessage(hwnd, WM_KEYDOWN, vkCode, keydown);
 				tstart = clock();
 			}
@@ -168,13 +186,13 @@ void Do()
 int main()
 {
 	system("title Minecraft-AFK By Cheny");
-	system("mode con cols=50 lines=30");
+	system("mode con cols=45 lines=25");
 	cout << "请前往指定窗口按下左Ctrl+左Alt捕获窗口" << endl;
 	while (hwnd == NULL)
 		getWindow();
 	Input();
-	cout << endl << "请在任意位置按下右Alt开始操作" << endl;
-	cout << "任意位置按下右Ctrl结束" << endl << endl;
+	cout << endl << ">>>请在任意位置按下右Alt开始操作<<<" << endl;
+	cout << ">>>任意位置按下右Ctrl结束<<<" << endl << endl;
 	while (true)
 	{
 		if (GetAsyncKeyState(VK_RMENU))
