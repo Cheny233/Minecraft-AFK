@@ -5,6 +5,9 @@ A win32api-based Minecraft AFK program that can complete mouse / keyboard action
 
 ----
 
+## 申明
+本程序允许被用于借鉴和重写，但请禁止将重写和借鉴的代码闭源或用于商业用途。
+
 ## 适用于
 - 挂机钓鱼（最基础简单的挂机方法）
 - 挂机刷怪（如小黑塔，刷怪塔）
