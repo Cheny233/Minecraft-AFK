@@ -13,7 +13,7 @@ A win32api-based Minecraft AFK program that can complete mouse / keyboard action
 
 ## 使用说明
 1. 请先从 [Release](https://github.com/Cheny233/Minecraft-AFK/releases) 下载合适的版本
-2. 如果下载的慢 ~~（虽然其实文件很小）~~ ，也可以从我的 [MCBBS下载地址](https://www.mcbbs.net/forum.php?mod=attachment&aid=MTQ5OTM0M3w0NTlkYjZmNXwxNTg1MTkyOTA4fDI2MDUwMzV8OTg0ODM0) 下载最新版本
+2. 如果下载的慢 ~~（虽然其实文件很小）~~ ，也可以从我的MCBBS上的 [下载地址](https://www.mcbbs.net/forum.php?mod=attachment&aid=MTQ5OTM0M3w0NTlkYjZmNXwxNTg1MTkyOTA4fDI2MDUwMzV8OTg0ODM0) 下载最新版本
 3. 解压后运行，按照提示操作即可
 
 ## 常见问题
