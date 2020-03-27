@@ -241,6 +241,7 @@ void createFile()
 	filename += ".afk";
 	char file[50] = "config\\";
 	strcat_s(file, filename.c_str());
+	system("mkdir config");
 	ofstream create(file);
 	create << file_data;
 	create.close();
