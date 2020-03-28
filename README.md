@@ -1,6 +1,6 @@
 # Minecraft-AFK
 ![ICON](https://attachment.mcbbs.net/forum/202003/25/123653j8nvw2qa8mqjze7e.png)  
-![Language](https://img.shields.io/badge/language-C%2B%2B-blue)  ![version](https://img.shields.io/github/v/release/Cheny233/Minecraft-AFK?color=orange&label=version)  ![last commit](https://img.shields.io/github/last-commit/Cheny233/Minecraft-AFK)  ![commits-since](https://img.shields.io/github/commits-since/Cheny233/Minecraft-AFK/latest)
+![Language](https://img.shields.io/badge/language-C%2B%2B-blue)  ![version](https://img.shields.io/github/v/release/Cheny233/Minecraft-AFK?color=orange&label=version)  ![commits-since](https://img.shields.io/github/commits-since/Cheny233/Minecraft-AFK/latest)  ![last commit](https://img.shields.io/github/last-commit/Cheny233/Minecraft-AFK)
 
 一个基于 WindowsAPI 的 Minecraft 的挂机程序，即使失去焦点或最小化依然可以完成鼠标/键盘的动作<br>
 A WindowsAPI-based Minecraft AFK program that can complete mouse / keyboard actions even if it loses focus or is minimized.
