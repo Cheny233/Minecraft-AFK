@@ -93,7 +93,8 @@ void Do()
 		{
 			SendMessage(hwnd, WM_LBUTTONDOWN, 0, 0);
 			SendMessage(hwnd, WM_LBUTTONUP, 0, 0);
-			Sleep(Speed);
+			if (sleep(Speed))
+				return;
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
 				if (sleep(Space))
@@ -129,7 +130,8 @@ void Do()
 		{
 			SendMessage(hwnd, WM_RBUTTONDOWN, 0, 0);
 			SendMessage(hwnd, WM_RBUTTONUP, 0, 0);
-			Sleep(Speed);
+			if (sleep(Speed))
+				return;
 			if (Continue != -1 && clock() - tstart >= Continue)
 			{
 				if (sleep(Space))
@@ -205,4 +207,4 @@ int main()
 		}
 		Sleep(1);
 	}
-}
+} 
