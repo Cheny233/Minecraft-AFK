@@ -75,7 +75,7 @@ void getWindow()
 	}
 }
 
-void int_get(int& a, bool flag)
+void Get(int& a, bool flag)
 {
 	cin >> a;
 	if (flag)
@@ -83,34 +83,37 @@ void int_get(int& a, bool flag)
 	else file_data += to_string(a) + '\n';
 }
 
+void Get(char& a, bool flag)
+{
+	cin >> a;
+	if (flag)
+		cout << a << endl;
+	else file_data.push_back(a), file_data += '\n';
+}
+
 void Input(bool flag)
 {
 	cout << "[1]左键连点 [2]左键长按" << endl;
 	cout << "[3]右键连点 [4]右键长按" << endl;
-	cout << "[5]字母键长按 [6]空格长按" << endl;
+	cout << "[5]按键长按" << endl;
 	cout << "请输入数字选择操作" << endl << "<< ";
-	int_get(Mode, flag);
+	Get(Mode, flag);
 	if (Mode == 1 || Mode == 3)
 	{
 		cout << "请输入连点速度（毫秒）" << endl << "<< ";
-		int_get(Speed, flag);
+		Get(Speed, flag);
 	}
 	else if (Mode == 5)
 	{
-		cout << "请输入字母" << endl << "<< ";
-		cin >> ch;
-		if (flag)
-			cout << ch << endl;
-		else file_data.push_back(ch), file_data += '\n';
+		cout << "请输入按键（数字，字母，空格）" << endl << "<< ";
+		Get(ch, flag);
 	}
-	else if (Mode == 6)
-		ch = ' ';
 	cout << "多少时间后后开始操作（毫秒）" << endl << "<< ";
-	int_get(Start, flag);
+	Get(Start, flag);
 	cout << "操作持续多少时间后暂停（毫秒，-1为无限）" << endl << "<< ";
-	int_get(Continue, flag);
+	Get(Continue, flag);
 	cout << "暂停后间隔多少时间继续操作（毫秒）" << endl << "<< ";
-	int_get(Space, flag);
+	Get(Space, flag);
 	if (Mode >= 5)
 	{
 		vkCode = LOBYTE(VkKeyScan(ch));
@@ -241,7 +244,7 @@ void createFile()
 	filename += ".afk";
 	char file[50] = "config\\";
 	strcat_s(file, filename.c_str());
-	system("mkdir config");
+	system("md config");
 	ofstream create(file);
 	create << file_data;
 	create.close();
@@ -249,8 +252,8 @@ void createFile()
 
 int main()
 {
-	system("title Minecraft-AFK By Cheny");
 	system("mode con cols=45 lines=25");
+	system("title Minecraft-AFK By Cheny");
 	bool flag = getFile();
 	cout << "请前往指定窗口按下左Ctrl+左Alt捕获窗口" << endl;
 	while (hwnd == NULL)
