@@ -240,7 +240,7 @@ void createFile()
 {
 	string filename;
 	cout << "\r请设置配置文件名称（15字以内）" << endl << "<< ";
-	cin >> filename;
+	getline(cin, filename);
 	filename += ".afk";
 	char file[50] = "config\\";
 	strcat_s(file, filename.c_str());
