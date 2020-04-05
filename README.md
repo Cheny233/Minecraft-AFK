@@ -14,7 +14,7 @@ A WindowsAPI-based Minecraft AFK program that can complete mouse / keyboard acti
 - 挂机钓鱼（最基础简单的挂机方法）
 - 挂机刷怪（如小黑塔，刷怪塔）
 - 挂机跑图 ~~（虽然你可能会由于某些意外情况惨死在路上）~~
-- 挂机完成某些MC工程（如铺铁轨等）
+- 挂机完成某些MC工程（如铺铁轨，垫方块等）
 
 ## 使用说明
 1. 请先从 [Release](https://github.com/Cheny233/Minecraft-AFK/releases) 下载合适的版本
