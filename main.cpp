@@ -95,7 +95,7 @@ void Input(bool flag)
 {
 	cout << "[1]左键连点 [2]左键长按" << endl;
 	cout << "[3]右键连点 [4]右键长按" << endl;
-	cout << "[5]按键长按" << endl;
+	cout << "[5]字母键长按 [6]空格长按" << endl;
 	cout << "请输入数字选择操作" << endl << "<< ";
 	Get(Mode, flag);
 	if (Mode == 1 || Mode == 3)
@@ -105,9 +105,11 @@ void Input(bool flag)
 	}
 	else if (Mode == 5)
 	{
-		cout << "请输入按键（数字，字母，空格）" << endl << "<< ";
+		cout << "请输入字母（也可以是数字，标点）" << endl << "<< ";
 		Get(ch, flag);
 	}
+	else if (Mode == 6)
+		ch = ' ';
 	cout << "多少时间后后开始操作（毫秒）" << endl << "<< ";
 	Get(Start, flag);
 	cout << "操作持续多少时间后暂停（毫秒，-1为无限）" << endl << "<< ";
@@ -240,6 +242,7 @@ void createFile()
 {
 	string filename;
 	cout << "\r请设置配置文件名称（15字以内）" << endl << "<< ";
+	getchar();
 	getline(cin, filename);
 	filename += ".afk";
 	char file[50] = "config\\";
