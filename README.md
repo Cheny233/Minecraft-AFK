@@ -29,7 +29,7 @@ A WindowsAPI-based Minecraft AFK program that can complete mouse / keyboard acti
 - 可以多开达到挂机完成多项操作的目的
   
 #### 我还是不懂具体如何操作怎么办？
-- 详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)<br>
+- 详细的教程请看我的 [MCBBS](https://www.mcbbs.net/thread-984834-1-1.html)，也可以到我的 [博客](https://cheny.cc/post/Minecraft-AFK) 上看<br>
 
 ## 关于反馈
 如果你发现了程序的bug，或者你有好的建议，你可以在 [Issues](https://github.com/Cheny233/Minecraft-AFK/issues) 中反馈
