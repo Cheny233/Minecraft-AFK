@@ -37,7 +37,7 @@ A WindowsAPI-based Minecraft AFK program that can complete mouse / keyboard acti
 ## 其他版本
 | 编写语言 | 项目地址 | 项目说明
 | ---- | ---- | ---- |
-| Python3 | [py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python3版本
+| Python3 | [super-coffee/py-Minecraft-AFK](https://github.com/jinzhijie/py-Minecraft-AFK) | 由[jinzhijie](https://github.com/jinzhijie)和[CharlieYu4994](https://github.com/CharlieYu4994)共同维护重写的Python3版本
 
 ## Language localization
 We welcome your post-contribution to language localization. You can open a new [Pull Requests](https://github.com/Cheny233/Minecraft-AFK/pulls) to me.
