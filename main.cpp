@@ -27,8 +27,8 @@ bool getFile()
 	long handle = _findfirst(path.c_str(), &file);
 	if (handle == -1)
 		return false;
-	cout << "检测到目录下有配置文件：" << endl << endl;
-	cout << "[0]不使用配置文件" << endl;
+	cout << "A configuration file is detected under the directory:" << endl << endl;
+	cout << "[0]Do not use configuration files" << endl;
 	int num = 1;
 	do
 	{
@@ -37,7 +37,7 @@ bool getFile()
 	} while (!_findnext(handle, &file));
 	cout << endl;
 	int count;
-	cout << "请选择配置文件：" << endl << "<< ";
+	cout << "Please select a configuration file:" << endl << "<< ";
 	cin >> count;
 	system("cls");
 	if (count == 0)
@@ -46,7 +46,7 @@ bool getFile()
 	strcat_s(filename, vec[count - 1].name);
 	FILE* stream;
 	freopen_s(&stream, filename, "r", stdin);
-	cout << "选择成功！文件名称：" << endl;
+	cout << "Successful choice! file name:" << endl;
 	cout << filename << endl << endl;
 	return true;
 }
@@ -63,11 +63,11 @@ void getWindow()
 				char title[50];
 				::GetWindowTextA(hwnd, title, sizeof(title));
 				system("cls");
-				cout << "捕获成功！窗口名称：" << endl;
+				cout << "Successfully captured! Window name:" << endl;
 				cout << title << endl;
 			}
 			else
-				cout << "捕获失败！请重试！" << endl;
+				cout << "Capture failed! Please try again!" << endl;
 			cout << endl;
 			return;
 		}
@@ -93,28 +93,28 @@ void Get(char& a, bool flag)
 
 void Input(bool flag)
 {
-	cout << "[1]左键连点 [2]左键长按" << endl;
-	cout << "[3]右键连点 [4]右键长按" << endl;
-	cout << "[5]字母键长按 [6]空格长按" << endl;
-	cout << "请输入数字选择操作" << endl << "<< ";
+	cout << "[1]Left click coninuously [2]Left click and hold" << endl;
+	cout << "[3]Right click coninuously [4]Right click and hold" << endl;
+	cout << "[5] Press and hold the letter key [6] Press and hold the space key" << endl;
+	cout << "Please enter a number to select the operation" << endl << "<< ";
 	Get(Mode, flag);
 	if (Mode == 1 || Mode == 3)
 	{
-		cout << "请输入连点速度（毫秒）" << endl << "<< ";
+		cout << "Please enter the click speed (ms)" << endl << "<< ";
 		Get(Speed, flag);
 	}
 	else if (Mode == 5)
 	{
-		cout << "请输入字母（也可以是数字，标点）" << endl << "<< ";
+		cout << "Please enter letters (can also be numbers, punctuation)" << endl << "<< ";
 		Get(ch, flag);
 	}
 	else if (Mode == 6)
 		ch = ' ';
-	cout << "多少时间后后开始操作（毫秒）" << endl << "<< ";
+	cout << "After how much time to start operation (ms)" << endl << "<< ";
 	Get(Start, flag);
-	cout << "操作持续多少时间后暂停（毫秒，-1为无限）" << endl << "<< ";
+	cout << "How much time the operation lasts (milliseconds, -1 is unlimited)" << endl << "<< ";
 	Get(Continue, flag);
-	cout << "暂停后间隔多少时间继续操作（毫秒）" << endl << "<< ";
+	cout << "How much time to continue operation after pause (ms)" << endl << "<< ";
 	Get(Space, flag);
 	if (Mode >= 5)
 	{
@@ -241,7 +241,7 @@ void Do()
 void createFile()
 {
 	string filename;
-	cout << "\r请设置配置文件名称（15字以内）" << endl << "<< ";
+	cout << "\rPlease set the configuration file name (within 30 characters)" << endl << "<< ";
 	getchar();
 	getline(cin, filename);
 	filename += ".afk";
@@ -258,23 +258,23 @@ int main()
 	system("mode con cols=45 lines=25");
 	system("title Minecraft-AFK By Cheny");
 	bool flag = getFile();
-	cout << "请前往指定窗口按下左Ctrl+左Alt捕获窗口" << endl;
+	cout << "Please go to the specified window and press left Ctrl+left Alt to capture the window" << endl;
 	while (hwnd == NULL)
 		getWindow();
 	Input(flag);
-	cout << endl << ">>>请在任意位置按下右Alt开始操作<<<" << endl;
-	cout << ">>>任意位置按下右Ctrl结束<<<" << endl;
+	cout << endl << ">>>Press the right Alt at any position to start the operation <<<" << endl;
+	cout << ">>>Press Ctrl anywhere to end <<<" << endl;
 	if (!flag)
-		cout << endl << ">>>结束后按下F12可保存配置到config<<<" << endl;
+		cout << endl << ">>>After finishing, press F12 to save the configuration<<<" << endl;
 	cout << endl;
 	while (true)
 	{
 		if (GetAsyncKeyState(VK_RMENU))
 		{
-			cout << "\r开始操作！按右Ctrl可结束！";
+			cout << "\rThe operation begins! Press the right Ctrl to end!";
 			system("color 03");
 			Do();
-			cout << "\r操作结束！按右Alt重新开始！";
+			cout << "\rThe operation is over! Press right Alt to start over!";
 			system("color 07");
 		}
 		if (!flag && GetAsyncKeyState(VK_F12))
