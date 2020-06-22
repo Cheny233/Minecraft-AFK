@@ -27,8 +27,8 @@ bool getFile()
 	long handle = _findfirst(path.c_str(), &file);
 	if (handle == -1)
 		return false;
-	cout << "¼ì²âµ½Ä¿Â¼ÏÂÓĞÅäÖÃÎÄ¼ş£º" << endl << endl;
-	cout << "[0]²»Ê¹ÓÃÅäÖÃÎÄ¼ş" << endl;
+	cout << "æ£€æµ‹åˆ°ç›®å½•ä¸‹æœ‰é…ç½®æ–‡ä»¶ï¼š" << endl << endl;
+	cout << "[0]ä¸ä½¿ç”¨é…ç½®æ–‡ä»¶" << endl;
 	int num = 1;
 	do
 	{
@@ -37,7 +37,7 @@ bool getFile()
 	} while (!_findnext(handle, &file));
 	cout << endl;
 	int count;
-	cout << "ÇëÑ¡ÔñÅäÖÃÎÄ¼ş£º" << endl << "<< ";
+	cout << "è¯·é€‰æ‹©é…ç½®æ–‡ä»¶ï¼š" << endl << "<< ";
 	cin >> count;
 	system("cls");
 	if (count == 0)
@@ -46,7 +46,7 @@ bool getFile()
 	strcat_s(filename, vec[count - 1].name);
 	FILE* stream;
 	freopen_s(&stream, filename, "r", stdin);
-	cout << "Ñ¡Ôñ³É¹¦£¡ÎÄ¼şÃû³Æ£º" << endl;
+	cout << "é€‰æ‹©æˆåŠŸï¼æ–‡ä»¶åç§°ï¼š" << endl;
 	cout << filename << endl << endl;
 	return true;
 }
@@ -63,11 +63,11 @@ void getWindow()
 				char title[50];
 				::GetWindowTextA(hwnd, title, sizeof(title));
 				system("cls");
-				cout << "²¶»ñ³É¹¦£¡´°¿ÚÃû³Æ£º" << endl;
+				cout << "æ•è·æˆåŠŸï¼çª—å£åç§°ï¼š" << endl;
 				cout << title << endl;
 			}
 			else
-				cout << "²¶»ñÊ§°Ü£¡ÇëÖØÊÔ£¡" << endl;
+				cout << "æ•è·å¤±è´¥ï¼è¯·é‡è¯•ï¼" << endl;
 			cout << endl;
 			return;
 		}
@@ -93,28 +93,28 @@ void Get(char& a, bool flag)
 
 void Input(bool flag)
 {
-	cout << "[1]×ó¼üÁ¬µã [2]×ó¼ü³¤°´" << endl;
-	cout << "[3]ÓÒ¼üÁ¬µã [4]ÓÒ¼ü³¤°´" << endl;
-	cout << "[5]×ÖÄ¸¼ü³¤°´ [6]¿Õ¸ñ³¤°´" << endl;
-	cout << "ÇëÊäÈëÊı×ÖÑ¡Ôñ²Ù×÷" << endl << "<< ";
+	cout << "[1]å·¦é”®è¿ç‚¹ [2]å·¦é”®é•¿æŒ‰" << endl;
+	cout << "[3]å³é”®è¿ç‚¹ [4]å³é”®é•¿æŒ‰" << endl;
+	cout << "[5]å­—æ¯é”®é•¿æŒ‰ [6]ç©ºæ ¼é•¿æŒ‰" << endl;
+	cout << "è¯·è¾“å…¥æ•°å­—é€‰æ‹©æ“ä½œ" << endl << "<< ";
 	Get(Mode, flag);
 	if (Mode == 1 || Mode == 3)
 	{
-		cout << "ÇëÊäÈëÁ¬µãËÙ¶È£¨ºÁÃë£©" << endl << "<< ";
+		cout << "è¯·è¾“å…¥è¿ç‚¹é€Ÿåº¦ï¼ˆæ¯«ç§’ï¼‰" << endl << "<< ";
 		Get(Speed, flag);
 	}
 	else if (Mode == 5)
 	{
-		cout << "ÇëÊäÈë×ÖÄ¸£¨Ò²¿ÉÒÔÊÇÊı×Ö£¬±êµã£©" << endl << "<< ";
+		cout << "è¯·è¾“å…¥å­—æ¯ï¼ˆä¹Ÿå¯ä»¥æ˜¯æ•°å­—ï¼Œæ ‡ç‚¹ï¼‰" << endl << "<< ";
 		Get(ch, flag);
 	}
 	else if (Mode == 6)
 		ch = ' ';
-	cout << "¶àÉÙÊ±¼äºóºó¿ªÊ¼²Ù×÷£¨ºÁÃë£©" << endl << "<< ";
+	cout << "å¤šå°‘æ—¶é—´ååå¼€å§‹æ“ä½œï¼ˆæ¯«ç§’ï¼‰" << endl << "<< ";
 	Get(Start, flag);
-	cout << "²Ù×÷³ÖĞø¶àÉÙÊ±¼äºóÔİÍ££¨ºÁÃë£¬-1ÎªÎŞÏŞ£©" << endl << "<< ";
+	cout << "æ“ä½œæŒç»­å¤šå°‘æ—¶é—´åæš‚åœï¼ˆæ¯«ç§’ï¼Œ-1ä¸ºæ— é™ï¼‰" << endl << "<< ";
 	Get(Continue, flag);
-	cout << "ÔİÍ£ºó¼ä¸ô¶àÉÙÊ±¼ä¼ÌĞø²Ù×÷£¨ºÁÃë£©" << endl << "<< ";
+	cout << "æš‚åœåé—´éš”å¤šå°‘æ—¶é—´ç»§ç»­æ“ä½œï¼ˆæ¯«ç§’ï¼‰" << endl << "<< ";
 	Get(Space, flag);
 	if (Mode >= 5)
 	{
@@ -241,7 +241,7 @@ void Do()
 void createFile()
 {
 	string filename;
-	cout << "\rÇëÉèÖÃÅäÖÃÎÄ¼şÃû³Æ£¨15×ÖÒÔÄÚ£©" << endl << "<< ";
+	cout << "\rè¯·è®¾ç½®é…ç½®æ–‡ä»¶åç§°ï¼ˆ15å­—ä»¥å†…ï¼‰" << endl << "<< ";
 	getchar();
 	getline(cin, filename);
 	filename += ".afk";
@@ -258,23 +258,23 @@ int main()
 	system("mode con cols=45 lines=25");
 	system("title Minecraft-AFK By Cheny");
 	bool flag = getFile();
-	cout << "ÇëÇ°ÍùÖ¸¶¨´°¿Ú°´ÏÂ×óCtrl+×óAlt²¶»ñ´°¿Ú" << endl;
+	cout << "è¯·å‰å¾€æŒ‡å®šçª—å£æŒ‰ä¸‹å·¦Ctrl+å·¦Altæ•è·çª—å£" << endl;
 	while (hwnd == NULL)
 		getWindow();
 	Input(flag);
-	cout << endl << ">>>ÇëÔÚÈÎÒâÎ»ÖÃ°´ÏÂÓÒAlt¿ªÊ¼²Ù×÷<<<" << endl;
-	cout << ">>>ÈÎÒâÎ»ÖÃ°´ÏÂÓÒCtrl½áÊø<<<" << endl;
+	cout << endl << ">>>è¯·åœ¨ä»»æ„ä½ç½®æŒ‰ä¸‹å³Altå¼€å§‹æ“ä½œ<<<" << endl;
+	cout << ">>>ä»»æ„ä½ç½®æŒ‰ä¸‹å³Ctrlç»“æŸ<<<" << endl;
 	if (!flag)
-		cout << endl << ">>>½áÊøºó°´ÏÂF12¿É±£´æÅäÖÃµ½config<<<" << endl;
+		cout << endl << ">>>ç»“æŸåæŒ‰ä¸‹F12å¯ä¿å­˜é…ç½®åˆ°config<<<" << endl;
 	cout << endl;
 	while (true)
 	{
 		if (GetAsyncKeyState(VK_RMENU))
 		{
-			cout << "\r¿ªÊ¼²Ù×÷£¡°´ÓÒCtrl¿É½áÊø£¡";
+			cout << "\rå¼€å§‹æ“ä½œï¼æŒ‰å³Ctrlå¯ç»“æŸï¼";
 			system("color 03");
 			Do();
-			cout << "\r²Ù×÷½áÊø£¡°´ÓÒAltÖØĞÂ¿ªÊ¼£¡";
+			cout << "\ræ“ä½œç»“æŸï¼æŒ‰å³Alté‡æ–°å¼€å§‹ï¼";
 			system("color 07");
 		}
 		if (!flag && GetAsyncKeyState(VK_F12))
